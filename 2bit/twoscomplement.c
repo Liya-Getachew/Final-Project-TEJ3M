@@ -29,19 +29,19 @@ void setup()
   Serial.print("Starting ... \n\n");
   delay(1000); // Wait for 1000 millisecond(s)
 
-  // loop through all two bit combinations from 00 to 11 for A
+  // loops through all two bit from 00 to 11 for A value
   for (int twosA = 0; twosA <= 1; twosA = twosA + 1) {
     digitalWrite(DIGIT_A2, twosA);
     for (int onesA = 0; onesA <= 1; ++onesA) {
       digitalWrite(DIGIT_A1, onesA);
       
-      // loop through all two bit combinations from 00 to 11 for B
+      // loops through two bit combinations from 00 to 11 for B value
       for (int twosB = 0; twosB <= 1; twosB = twosB +1) {
         digitalWrite(DIGIT_B2, twosB);
         for (int onesB = 0; onesB <= 1; ++onesB) {
           digitalWrite(DIGIT_B1, onesB);
           
-          // changes digit A & B from binary to integers
+          // changes digits A & B from binary to integers
           int aValue = (twosA * 2) + onesA;
           int bValue = (twosB * 2) + onesB;
           
