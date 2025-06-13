@@ -23,6 +23,7 @@ void setup()
   pinMode(DIGIT_B1, OUTPUT);
   pinMode(DIGIT_B2, OUTPUT);
   pinMode(DIGIT_B3, OUTPUT);
+  pinMode(SUBTRACTION, OUTPUT);
   
   // set all pins to "0"
   digitalWrite(DIGIT_A1, 0); //LOW and HIGH just reference 0 & 1
