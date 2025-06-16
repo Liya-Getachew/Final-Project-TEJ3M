@@ -47,35 +47,35 @@ void setup()
   	for (int threesA = 0; threesA <= 1; ++threesA) {
     	digitalWrite(DIGIT_A3, threesA); 
     	for (int twosA = 0; twosA <= 1; ++twosA) {
-      		digitalWrite(DIGIT_A2, twosA);
-      		for (int onesA = 0; onesA <= 1; ++onesA) {
-        		digitalWrite(DIGIT_A1, onesA);
-              	for (int foursB = 0; foursB <= 1; ++foursB) {
-          			digitalWrite(DIGIT_B4, foursB);
-        			for (int threesB = 0; threesB <= 1; ++threesB) {
-          				digitalWrite(DIGIT_B3, threesB);
-          				for (int twosB = 0; twosB <= 1; ++twosB) {
-            				digitalWrite(DIGIT_B2, twosB);
-            				for (int onesB = 0; onesB <= 1; ++onesB) {
-              					digitalWrite(DIGIT_B1, onesB);
+      	digitalWrite(DIGIT_A2, twosA);
+      	for (int onesA = 0; onesA <= 1; ++onesA) {
+        	digitalWrite(DIGIT_A1, onesA);
+          for (int foursB = 0; foursB <= 1; ++foursB) {
+          	digitalWrite(DIGIT_B4, foursB);
+        		for (int threesB = 0; threesB <= 1; ++threesB) {
+          		digitalWrite(DIGIT_B3, threesB);
+          		for (int twosB = 0; twosB <= 1; ++twosB) {
+            		digitalWrite(DIGIT_B2, twosB);
+            		for (int onesB = 0; onesB <= 1; ++onesB) {
+              		digitalWrite(DIGIT_B1, onesB);
 
-                                // changes values from binary to decimal
-                                int aValue =  (foursA * 8) + (threesA * 4) + (twosA * 2) + onesA;
-                                int bValue =  (foursB * 8) + (threesB * 4) + (twosB * 2) + onesB;
+                  // changes values from binary to decimal
+                  int aValue =  (foursA * 8) + (threesA * 4) + (twosA * 2) + onesA;
+                  int bValue =  (foursB * 8) + (threesB * 4) + (twosB * 2) + onesB;
 
-                                Serial.print("A value = " + String(foursA) + String(threesA) + String(twosA) + String(onesA) + "\n");
-                                Serial.print("B value = " + String(foursB) + String(threesB) + String(twosB) + String(onesB) + "\n");
+                  Serial.print("A value = " + String(foursA) + String(threesA) + String(twosA) + String(onesA) + "\n");
+                  Serial.print("B value = " + String(foursB) + String(threesB) + String(twosB) + String(onesB) + "\n");
 
-                                Serial.print(String(aValue) + " + " + String(bValue) + " = " + String(aValue + bValue) + "\n\n");
-                                delay(DELAY_TIME); // Wait for 3500 millisecond(s)
-                             }
-           				 }
-        			 }
-                 }
-      		 }
-         }
+                  Serial.print(String(aValue) + " + " + String(bValue) + " = " + String(aValue + bValue) + "\n\n");
+                  delay(DELAY_TIME); // Wait for 3500 millisecond(s)
+                }
+           		}
+        		}
+          }
+      	}
       }
-   }
+    }
+  }
 }
 
 void loop()

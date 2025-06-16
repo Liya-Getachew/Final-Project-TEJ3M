@@ -36,6 +36,7 @@ void setup()
         digitalWrite(DIGIT_B2, twosB);
         for (int onesB = 0; onesB <= 1; ++onesB) {
           digitalWrite(DIGIT_B1, onesB);
+
           Serial.print("A2 = " + String(twosA) + "\n");
           Serial.print("A1 = " + String(onesA) + "\n");
           Serial.print("B2 = " + String(twosB) + "\n");

@@ -32,7 +32,7 @@ void setup()
   Serial.print("Starting ... \n\n");
   delay(1000); // Wait for 1000 millisecond(s)
 
-
+  // once all addition equations are complete, loop through all subtraction equations
   for (int subtraction_state = 0; subtraction_state <= 1; subtraction_state = subtraction_state + 1) {
     digitalWrite(SUBTRACTION, subtraction_state);
     

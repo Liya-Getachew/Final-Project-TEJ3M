@@ -35,7 +35,7 @@ void setup()
   Serial.print("Starting ... \n\n");
   delay(1000); // Wait for 1000 millisecond(s)
 
-  // loops through all two bit from 00 to 11 for A value
+  // loops through all two bit from 000 to 111 for A value
   for (int threesA = 0; threesA <= 1; threesA = threesA + 1) {
     digitalWrite(DIGIT_A3, threesA);
     for (int twosA = 0; twosA <= 1; twosA = twosA + 1) {
@@ -43,7 +43,7 @@ void setup()
       for (int onesA = 0; onesA <= 1; ++onesA) {
         digitalWrite(DIGIT_A1, onesA);
       
-        // loops through two bit combinations from 00 to 11 for B value
+        // loops through two bit combinations from 000 to 111 for B value
         for (int threesB = 0; threesB <= 1; threesB = threesB + 1) {
           digitalWrite(DIGIT_B3, threesB);
           for (int twosB = 0; twosB <= 1; twosB = twosB +1) {

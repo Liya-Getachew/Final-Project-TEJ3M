@@ -32,23 +32,25 @@ void setup()
   digitalWrite(DIGIT_B1, 0); 
   digitalWrite(DIGIT_B2, 0);
   digitalWrite(DIGIT_B3, 0);
+  digitalWrite(SUBTRACTION, 0);
   
   // loop over the inputs
   Serial.print("Starting ... \n\n");
   delay(1000); // Wait for 1000 millisecond(s)
 
-
+  // once all addition equations are complete, loop through all subtraction equations
   for (int subtraction_state = 0; subtraction_state <= 1; subtraction_state = subtraction_state + 1) {
     digitalWrite(SUBTRACTION, subtraction_state);
+
+    // loop through all three bit combinations from 000 to 111 for the A value
     for (int threesA = 0; threesA <= 1; threesA = threesA + 1) {
       digitalWrite(DIGIT_A3, threesA);
-      // loop through all two bit combinations from 00 to 11 for A
       for (int twosA = 0; twosA <= 1; twosA = twosA + 1) {
         digitalWrite(DIGIT_A2, twosA);
         for (int onesA = 0; onesA <= 1; ++onesA) {
           digitalWrite(DIGIT_A1, onesA);
 
-          // loop through all two bit combinations from 00 to 11 for B
+          // loop through all three bit combinations from 000 to 111 for the B value
           for (int threesB = 0; threesB <= 1; threesB = threesB + 1) {
             digitalWrite(DIGIT_B3, threesB);
             for (int twosB = 0; twosB <= 1; twosB = twosB +1) {
