@@ -44,18 +44,25 @@ void setup()
 
   for (int foursA = 0; foursA <= 1; ++foursA) {
     digitalWrite(DIGIT_A4, foursA); 
+
   	for (int threesA = 0; threesA <= 1; ++threesA) {
     	digitalWrite(DIGIT_A3, threesA); 
+
     	for (int twosA = 0; twosA <= 1; ++twosA) {
       	digitalWrite(DIGIT_A2, twosA);
+
       	for (int onesA = 0; onesA <= 1; ++onesA) {
         	digitalWrite(DIGIT_A1, onesA);
+
           for (int foursB = 0; foursB <= 1; ++foursB) {
           	digitalWrite(DIGIT_B4, foursB);
+
         		for (int threesB = 0; threesB <= 1; ++threesB) {
           		digitalWrite(DIGIT_B3, threesB);
+
           		for (int twosB = 0; twosB <= 1; ++twosB) {
             		digitalWrite(DIGIT_B2, twosB);
+                
             		for (int onesB = 0; onesB <= 1; ++onesB) {
               		digitalWrite(DIGIT_B1, onesB);
 
