@@ -11,6 +11,7 @@ const int DIGIT_A3 = 9;
 const int DIGIT_B3 = 8;
 const int DIGIT_A4 = 7;
 const int DIGIT_B4 = 6;
+
 const int DELAY_TIME = 7000;
 
 void setup()
@@ -26,7 +27,6 @@ void setup()
   pinMode(DIGIT_B2, OUTPUT);
   pinMode(DIGIT_B3, OUTPUT);
   pinMode(DIGIT_B4, OUTPUT);
-  pinMode(SUBTRACTION, OUTPUT);
   
   // set all pins to "0"
   digitalWrite(DIGIT_A1, 0); //LOW and HIGH just reference 0 & 1
