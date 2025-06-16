@@ -88,6 +88,7 @@ void setup()
                       if (subtraction_state < 1){
                         Serial.print("A value = " + String(foursA) + String(threesA) + String(twosA) + String(onesA) + "\n");
                         Serial.print("B value = " + String(foursB) + String(threesB) + String(twosB) + String(onesB) + "\n");
+                        Serial.print(String(aValue) + " - " + String(bValue) + " = " + String(aValue - bValue) + "\n\n");
                         delay(DELAY_TIME); // Wait for 2000 millisecond(s)
                       }
               
