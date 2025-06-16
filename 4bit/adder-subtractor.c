@@ -57,7 +57,7 @@ void setup()
       for (int threesA = 0; threesA <= 1; ++threesA) {
         digitalWrite(DIGIT_A3, threesA);
 
-        for (int twosA = 0; twosA <= 1; ++twosB) {
+        for (int twosA = 0; twosA <= 1; ++twosA) {
           digitalWrite(DIGIT_A2, twosA);
 
           for (int onesA = 0; onesA <= 1; ++onesA) {
