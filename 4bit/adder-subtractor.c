@@ -65,9 +65,9 @@ void setup()
 
             for (int foursB = 0; foursB <= 1; ++foursB) {
               // loop through all three bit combinations from 000 to 111 for the B value
-              for (int threesB = 0; threesB <= 1; threesB) {
+              for (int threesB = 0; threesB <= 1; ++threesB) {
                 digitalWrite(DIGIT_B3, threesB);
-                for (int twosB = 0; twosB <= 1; twosB = twosB +1) {
+                for (int twosB = 0; twosB <= 1; ++twosB) {
                   digitalWrite(DIGIT_B2, twosB);
                   for (int onesB = 0; onesB <= 1; ++onesB) {
                     digitalWrite(DIGIT_B1, onesB);
@@ -77,12 +77,12 @@ void setup()
                       int bValue =  (foursB * 8) + (threesB * 4) + (twosB * 2) + onesB;
 
                         // makes sure the digit values are between 3 to -4 (highest and lowest possible values using 3-bit twos complement adders)
-                      if (aValue >= 4) {
-                        aValue -= 8;
+                      if (aValue >= 8) {
+                        aValue -= 16;
                       }
 
-                      if (bValue >= 4) {
-                        bValue -= 8;
+                      if (bValue >= 8) {
+                        bValue -= 16;
                       }
 
                       if (subtraction_state < 1){
